@@ -51,4 +51,4 @@ Bootstrap results are reproducible given the fixed seed. The IPW step uses strat
 
 ## Troubleshooting
 
-If bands look very wide or flat, check for small or near-deterministic strata; these inflate variance. If Stata reports missing variables, align your dataset’s names with those referenced above. Font warnings are cosmetic; delete the font-setting lines if needed. For methodological details and notation, see `methods.pdf` if provided.
+If bands look very wide or flat, check for small or near-deterministic strata; these inflate variance. If Stata reports missing variables, align your dataset’s names with those referenced above. For methodological details and notation, see `methods.pdf`.
