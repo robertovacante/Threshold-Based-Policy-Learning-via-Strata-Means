@@ -30,8 +30,9 @@ For each outcome, the code computes a score $begin:math:text$\\hat\\tau(s)=\\bar
 
 ## Outputs
 
-For each outcome you will get a two-panel figure in `OUTDIR/OPL_results/` as PNG, PDF, and `.gph`. The top panel shows stacked counts of the joint cells with a mismatch line; the bottom panel shows the value curve $begin:math:text$\\Delta(\\theta)$end:math:text$ with a 95% bootstrap band. A Stata log named with the current date is also saved. Binary outcomes are plotted in percentage points, continuous outcomes in outcome units.
+For each outcome, the script writes: (i)	combined_<outcome>.png and .pdf: a two-panel figure with (top) composition bars and mismatch curve and (bottom) value-vs-RCT with a 95% stratified bootstrap band; (ii)	combined_<outcome>.gph: the Stata graph file.
 
+An example of the output is included in this repository. See Figure 1 (figure1.pdf) and Figure 2 (figure2.pdf) for representative panels produced by the script; they illustrate the composition and mismatch diagnostics and the value path with its bootstrap band.
 ## Customization
 
 Edit the treatment and outcome variable lists near the top of the do-file:
