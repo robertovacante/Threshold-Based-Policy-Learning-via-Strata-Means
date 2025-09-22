@@ -26,7 +26,7 @@ The script reads `${DATADIR}/${DATAFILE}`, builds a simple strata-mean score, tr
 
 ## What the script does
 
-For each outcome, the code computes a score $begin:math:text$\\hat\\tau(s)=\\bar Y(1|s)-\\bar Y(0|s)$end:math:text$ at the stratum level and applies threshold rules given by the empirical percentiles of that score. At each percentile it estimates $begin:math:text$\\widehat W(d_\\theta)$end:math:text$ via Horvitz–Thompson using the design propensities within strata, forms $begin:math:text$\\Delta(\\theta)=\\widehat W - \\bar Y_{RCT}$end:math:text$, and records the four joint cells between the learned rule and the experimental assignment. From these cells it reports the mismatch rate (reallocations relative to the RCT mix) and the treated share under the rule (coverage). A stratified bootstrap resamples within `female × location` to produce pointwise percentile confidence bands for $begin:math:text$\\Delta(\\theta)$end:math:text$.
+For each outcome, the code computes a score at the stratum level and applies threshold rules given by the empirical percentiles of that score. At each percentile it estimates the policy value via Horvitz–Thompson using the design propensities within strata, forms the difference between the policy value and the RCT at the median, and records the four joint cells between the learned rule and the experimental assignment. From these cells it reports the mismatch rate (reallocations relative to the RCT mix) and the treated share under the rule (coverage). A stratified bootstrap resamples within `female × location` to produce pointwise percentile confidence bands for the policy value and the RCT.
 
 ## Outputs
 
